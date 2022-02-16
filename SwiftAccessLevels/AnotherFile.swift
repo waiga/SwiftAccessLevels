@@ -12,9 +12,18 @@ class AnotherClassInAnotherFile {
     
     init() {
         
-        //Step 8. Try to print aFilePrivateProperty Here
+        //Step 8. Try to print aFilePrivateProperty Here - Not Possible
+//        let k = AClass()
+//        print("This is AnotherClass In Another File. ")
+//        print(k.anInternalProperty)
+        //anInternalProperty만 가능함...
         
-        //Step 10. Try to print anInternalProperty Here
+//        print(aFilePrivateProperty)
+        //Step 10. Try to print anInternalProperty Here - Possible 아하. 이해 되었음... 검토
+//        let a = AClass()
+//        let b = a.anInternalProperty
+//        print(b)
+//        print("Hello, AnotherClassInAnotherFile")
         
     }
     

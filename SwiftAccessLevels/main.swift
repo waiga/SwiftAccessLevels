@@ -11,5 +11,12 @@ import Foundation
 let aClass = AClass()
 
 aClass.methodA()
+//aClass.methodB()
 
+//let afile = AnotherClassInTheSameFile()
+//afile
+
+
+let file = AnotherClassInAnotherFile()
+file
 

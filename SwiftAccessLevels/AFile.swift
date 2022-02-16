@@ -17,36 +17,50 @@ class AClass {
     
     var anInternalProperty = "internal property"
     
+//    var callVariable: String = ""
+    
     func methodA () {
         
         var aLocalVariable = "local variable"
-        
+//        self.callVariable = aLocalVariable
+            
         //Step 1. Try to print aLocalVariable Here - Possible
-        //print("\(aLocalVariable) printed from methodA in AClass")
+//        print("\(aLocalVariable) printed from methodA in AClass")
         
-        //Step 3. Try to print aPrivateProperty Here
+        //Step 3. Try to print aPrivateProperty Here - Possible
+//        print(aPrivateProperty)
         
-        //Step 6. Try to print aFilePrivateProperty Here
+        //Step 6. Try to print aFilePrivateProperty Here - Possible
+//        print(aFilePrivateProperty)
         
-        //Step 9. Try to print anInternalProperty Here
+        //Step 9. Try to print anInternalProperty Here - Possible
+//        print(anInternalProperty)
     }
     
     func methodB () {
         
-        //Step 2. Try to print aLocalVariable Here
+        //Step 2. Try to print aLocalVariable Here - not possible
+//        print("methodB \(callVariable)")
         
-        //Step 4. Try to print aPrivateProperty Here
+        //Step 4. Try to print aPrivateProperty Here - possible (main) 검토
+//        print(aPrivateProperty)
     }
-    
 }
+
+
 
 class AnotherClassInTheSameFile {
     
     init() {
         
-        //Step 5. Try to print aPrivateProperty Here
+        //Step 5. Try to print aPrivateProperty Here - not possible
+//        print(aPrivateProperty)
         
-        //Step 7. Try to print aFilePrivateProperty Here
+        //Step 7. Try to print aFilePrivateProperty Here - not Possible... 인데?? 왜 possiblefh 이제 이해되었음. 검토 
+        let k = AClass()
+        print("This is AnotherClassInTheSameFile")
+        print(k.aFilePrivateProperty)
+//        print("아니 aFilePrivateProperty는 안된다니까요...")
         
     }
 }
