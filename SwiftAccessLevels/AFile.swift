@@ -17,12 +17,12 @@ class AClass {
     
     var anInternalProperty = "internal property"
     
-//    var callVariable: String = ""
+    var callVariable: String = ""
     
     func methodA () {
         
         var aLocalVariable = "local variable"
-//        self.callVariable = aLocalVariable
+        self.callVariable = aLocalVariable
             
         //Step 1. Try to print aLocalVariable Here - Possible
 //        print("\(aLocalVariable) printed from methodA in AClass")
@@ -41,6 +41,8 @@ class AClass {
         
         //Step 2. Try to print aLocalVariable Here - not possible
 //        print("methodB \(callVariable)")
+        //if this will posssible
+        print("Another Brilliant Way to bring variablefrom func methodA local variable in func methodB : \(callVariable) ")
         
         //Step 4. Try to print aPrivateProperty Here - possible (main) 검토
 //        print(aPrivateProperty)
@@ -52,7 +54,6 @@ class AClass {
 class AnotherClassInTheSameFile {
     
     init() {
-        
         //Step 5. Try to print aPrivateProperty Here - not possible
 //        print(aPrivateProperty)
         
